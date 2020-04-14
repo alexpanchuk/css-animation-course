@@ -1,0 +1,47 @@
+/* Styles for highlighting the hovered options */
+
+.option .more-info {
+  visibility: hidden;
+}
+
+.option .call-to-action {
+  transform: scale(0.2);
+  visibility: hidden;
+}
+
+.option.highlighted {
+  background-color: #fff;
+  border-color: #eee;
+  transform: scale(1.2) translateY(1em);
+}
+
+.option.highlighted .badge {
+  transform: translateY(-5em) scale(1.2);
+}
+
+.option.highlighted h2 {
+  transform: translateY(-3.5em);
+}
+
+.option.highlighted .more-info {
+  transform: translateY(-4em);
+  visibility: visible;
+}
+
+.option.highlighted .call-to-action {
+  transform: translateY(1.25em);
+  visibility: visible;
+}
+
+.option.highlighted .summary {
+  visibility: hidden;
+}
+
+.option {
+  transition: transform 5s cubic-bezier(0, 1.7, 0.3, 1),
+    background 0.2s ease-out;
+}
+
+.option * {
+  transition: transform 5s cubic-bezier(0, 1.7, 0.3, 1);
+}
