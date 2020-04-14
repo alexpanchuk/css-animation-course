@@ -1,0 +1,67 @@
+/* Styles for the buttons */
+
+.button {
+  background: none;
+  position: relative;
+  text-decoration: none;
+}
+
+.button::before {
+  background: rgba(200, 200, 200, 0.8);
+  border-radius: 0.25em;
+  bottom: -0.1em;
+  content: "";
+  left: 0.1em;
+  position: absolute;
+  right: 0.1em;
+  top: 0.5em;
+  z-index: -1;
+}
+
+.button::after {
+  background: #1a9e3f;
+  border-radius: 0.25em;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.button:hover::before {
+  -webkit-transform: translateY(0.1em);
+  transform: translateY(0.1em);
+}
+
+.button:hover::after {
+  background: #28b54f;
+}
+
+.button:active {
+  -webkit-transform: translateY(0.2em);
+  transform: translateY(0.2em);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.button:active::before {
+  -webkit-transform: translateY(-0.1em);
+  transform: translateY(-0.1em);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.button,
+.button::before,
+.button::after {
+  -webkit-transition: all 0.5s cubic-bezier(0, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0, 1, 0.3, 1);
+}

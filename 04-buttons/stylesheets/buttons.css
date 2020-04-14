@@ -1,0 +1,59 @@
+/* Styles for the buttons */
+.button {
+  position: relative;
+  background: none;
+  text-decoration: none;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  right: 0.1em;
+  bottom: -0.1em;
+  left: 0.1em;
+  border-radius: 0.25em;
+  background-color: rgba(200, 200, 200, 0.8);
+  z-index: -1;
+}
+
+.button:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: #1a9e3f;
+  border-radius: 0.25em;
+  z-index: -1;
+}
+
+.button:hover {
+  text-decoration: none;
+  transform: scale(1.02);
+}
+
+.button:hover:before {
+  transform: translateY(0.1em);
+}
+
+.button:hover:after {
+  background-color: #28b54f;
+}
+
+.button:active {
+  transform: translateY(0.2em);
+  transition: none;
+}
+
+.button:active:before {
+  transform: translateY(-0.1em);
+  transition: none;
+}
+
+.button,
+.button:before,
+.button:after {
+  transition: all 0.5s cubic-bezier(0, 1, 0.3, 1);
+}
