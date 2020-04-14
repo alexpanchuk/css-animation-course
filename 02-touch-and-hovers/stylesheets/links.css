@@ -22,8 +22,8 @@ a:after {
 }
 
 a:hover:after {
-  /* right: 0; */
-  animation: anchor-underline 1s ease-out infinite;
+  right: 0;
+  /* animation: anchor-underline 1s ease-out infinite; */
   color: #457dfb;
 }
 
