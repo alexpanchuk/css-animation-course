@@ -1,3 +1,7 @@
+/**
+ * Можно использовать scrollmagic вместо этого
+ */
+
 const rafFallback = (cb) => setTimeout(cb, 100 / 60);
 const scroll = window.requestAnimationFrame || rafFallback;
 
