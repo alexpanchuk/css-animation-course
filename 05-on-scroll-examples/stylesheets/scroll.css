@@ -1,0 +1,139 @@
+/* Styles for the animated quote */
+
+.quote {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  font-weight: bold;
+  height: 40em;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 0 0 1em #fff;
+}
+
+.quote:after {
+  content: "";
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  background: linear-gradient(to bottom, #fee, rgba(255, 238, 238, .4) 30%, rgba(255, 238, 238, .4) 70%, #fee);
+}
+
+/* This is a lovely trick for getting content to go full width in a container */
+.full-width {
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+    right: 50%;
+    left: 50%;
+  width: 100vw;
+}
+
+.quote p {
+  font-size: 2em;
+  max-width: 20em;
+  opacity: 0;
+  position: absolute;
+    bottom: 1em;
+  transform: translateY(2em) scale(1.4);
+  transition: none;
+  width: 80%;
+  z-index: 1;
+}
+
+.quote .source {
+  font-style: italic;
+  opacity: .8;
+}
+
+.quote .background {
+  background: url(../images/yogi_berra.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0;
+  position: absolute;
+    top: 0;
+    right: -20%;
+    bottom: 0;
+    left: 0;
+  transform: translateX(-10%);
+  transition: none;
+  z-index: 0;
+}
+
+.quote.is-visible .background,
+.quote.is-visible p {
+  opacity: 1;
+  transform: none;
+}
+
+.quote.is-visible .background {
+  transition: transform 2s .4s cubic-bezier(0,1,.3,1),
+              opacity 3s .4s ease-out;
+}
+
+
+.quote.is-visible p {
+  transition: transform 2s cubic-bezier(0,1,.2,1.1),
+              opacity 4s ease-out;
+}
+
+
+/* Header stuff */
+
+header {
+  opacity: 0;
+  transition: opacity .5s .25s ease-out;
+}
+
+header.is-visible {
+  opacity: 1;
+}
+
+.main-photo {
+  transform: scale(.8);
+}
+
+.heading {
+  transform: translate(-50%, calc(-50% + 1em));
+}
+
+.is-visible .main-photo {
+  transform: none;
+}
+
+.is-visible .heading {
+  transform: translate(-50%, -50%);
+}
+
+.main-photo,
+.heading {
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1);
+  will-change: transform;
+}
+
+/* Inline photos */
+
+.inline-photo {
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  max-width: 600px;
+  width: 90%;
+  will-change: transform, opacity;
+}
+
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(-2deg);
+}
+
+
