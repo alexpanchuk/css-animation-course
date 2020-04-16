@@ -1,0 +1,118 @@
+@import "../../../../stylesheets/settings";
+@import "../../../../stylesheets/default";
+
+
+html, body {
+  background: #fee;
+  color: #19292E;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.content {
+  margin: 4em auto;
+  max-width: 740px;
+  width: 80%;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+p, ul {
+  font-size: 1.5em;}
+
+li {
+  font-size: 1em;
+}
+
+header {
+  height: 80vh;
+  position: relative;
+}
+
+header:after {
+  content: "";
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.heading {
+  color: #19292E;
+  font-size: 8em;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(255,255,255,.5);
+  position: absolute;
+    top: 50%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5em;
+  z-index: 10;
+} 
+
+.modal {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 2em;
+  height: 400px;
+  position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+  width: 600px;
+  z-index: 99;
+}
+
+.modal h2 {
+  color: #333;
+  font-size: 2em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.modal p {
+  color: #333;
+  font-size: 1.5em;
+  margin: 1em;
+} 
+
+form {
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+
+input {
+  border-radius: .1em !important;
+  border: 1px solid #333;
+  color: #333;
+  font-size: 1.5em;
+  padding: .25em;
+} 
+
+input[type=email] {
+  margin: 0 .5em;
+}
+
+input[type=submit] {
+  background: #333;
+}
+
+.modal .close {
+  cursor: pointer;
+  color: #333;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
